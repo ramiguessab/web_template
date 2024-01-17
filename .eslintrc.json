@@ -1,0 +1,41 @@
+{
+    "extends": [
+        "next/core-web-vitals",
+        "eslint:recommended"
+    ],
+    "rules": {
+        "complexity": [
+            "error",
+            5
+        ],
+        "curly": "error",
+        "eqeqeq": "error",
+        "func-style": [
+            "error",
+            "declaration"
+        ],
+        "no-eval": "error",
+        "no-ternary": "warn",
+        "no-eq-null": "error",
+        "max-params": [
+            "warn",
+            4
+        ],
+        "max-lines": [
+            "warn",
+            150
+        ],
+        "max-depth": [
+            "warn",
+            4
+        ],
+        "no-inline-comments": "error",
+        "no-warning-comments": "error",
+        "capitalized-comments": "error",
+        "multiline-comment-style": [
+            "error",
+            "separate-lines"
+        ],
+        "no-var": "error"
+    }
+}
