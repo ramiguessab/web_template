@@ -46,6 +46,9 @@
       ],
       "@database": [
         "./backend/db.ts"
+      ],
+      "@scripts/*": [
+        "./scripts/*"
       ]
     }
   },
@@ -53,7 +56,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    "jest.config.js"
   ],
   "exclude": [
     "node_modules"

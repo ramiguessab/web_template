@@ -3,9 +3,11 @@
 > `yarn`\
 > `yarn dev`
 
+> This templates uses server actions as backend and drizzle as orm when you want to add a schema use `yarn add-schema $schema_name` and you will find it in `@backend/schemas` folder and if you want to add a handler (server side function) use `yarn add-handler $handler_name` it will add a file with it testing file in `@backend/handlers`
+
 ## Todo
 
--   [ ] Testing Tools for backend
+-   [x] Testing Tools for backend
 -   [ ] Testing Tools for frontend
 -   [ ] Site map,Robots Generator
 -   [ ] React Utils (ShowIf,Loop)

@@ -4,4 +4,6 @@ import { drizzle } from 'drizzle-orm/vercel-postgres'
 
 dotenv.config()
 
-export const db = drizzle(sql)
+const schema = {}
+
+export const db = drizzle(sql, { schema })

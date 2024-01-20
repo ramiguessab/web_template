@@ -31,7 +31,6 @@
         ],
         "no-inline-comments": "error",
         "no-warning-comments": "error",
-        "capitalized-comments": "error",
         "multiline-comment-style": [
             "error",
             "separate-lines"
