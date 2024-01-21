@@ -9,7 +9,10 @@
 
 -   [x] Testing Tools for backend
 -   [ ] Testing Tools for frontend
--   [ ] Site map,Robots Generator
--   [ ] React Utils (ShowIf,Loop)
+-   [ ] Site map,Robots,manifest Generator
+-   [x] React Utils (Show,Loop,Switch)
 -   [ ] OG Graph images
+-   [ ] Page Transisions
+-   [ ] Blob Storage
+-   [x] Redis rate limiter
 -   [x] Strict ESLint
