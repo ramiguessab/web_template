@@ -14,5 +14,6 @@
 -   [ ] OG Graph images
 -   [ ] Page Transisions
 -   [ ] Blob Storage
+-   [ ] Authentication
 -   [x] Redis rate limiter
 -   [x] Strict ESLint
