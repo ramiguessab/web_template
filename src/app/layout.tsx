@@ -1,13 +1,14 @@
+import './globals.css'
 import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import { ThemeProvider } from '@components/utils/ThemeProvider'
+import { SessionProvider } from '@components/utils/SessionProvider'
 import Show from '@components/utils/Show'
 import Limited from './limited'
 import { headers } from 'next/headers'
 import { Ratelimit } from '@upstash/ratelimit'
 import { kv } from '@vercel/kv'
-import './globals.css'
 
 const rateCache: Map<string, number> = new Map()
 
@@ -36,17 +37,19 @@ export default async function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="system"
-                    enableSystem
-                    disableTransitionOnChange
-                    enableColorScheme
-                >
-                    <Show when={[success]} fallback={<Limited />}>
-                        {children}
-                    </Show>
-                </ThemeProvider>
+                <SessionProvider>
+                    <ThemeProvider
+                        attribute="class"
+                        defaultTheme="system"
+                        enableSystem
+                        disableTransitionOnChange
+                        enableColorScheme
+                    >
+                        <Show when={[success]} fallback={<Limited />}>
+                            {children}
+                        </Show>
+                    </ThemeProvider>
+                </SessionProvider>
             </body>
         </html>
     )
