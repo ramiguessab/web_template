@@ -44,6 +44,9 @@
       "@handlers/*": [
         "./backend/lib/handlers/*"
       ],
+      "@next-api/*": [
+        "./src/app/api/*"
+      ],
       "@database": [
         "./backend/db.ts"
       ],

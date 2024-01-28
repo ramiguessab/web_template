@@ -10,34 +10,16 @@ export const authOptions: NextAuthOptions = {
         })
     ],
     callbacks: {
-        jwt(params) {
-            const { account, token, user, profile, session, trigger } = params //eslint-disable-line
-
+        jwt({ token }) {
             return token
         },
-        redirect({ baseUrl, url }) {
-            console.log('\n REDIRECT---------')
-            console.log('baseUrl', baseUrl)
-            console.log('url', url)
+        redirect({ baseUrl }) {
             return baseUrl
         },
-        session({ newSession, session, token, trigger, user }) {
-            console.log('\n SESSION---------')
-            console.log('newSession', newSession)
-            console.log('session', session)
-            console.log('token', token)
-            console.log('trigger', trigger)
-            console.log('user', user)
-
+        session({ session }) {
             return session
         },
-        signIn({ account, user, credentials, email, profile }) {
-            console.log('\n SIGNIN---------')
-            console.log('account', account)
-            console.log('user', user)
-            console.log('credentials', credentials)
-            console.log('email', email)
-            console.log('profile', profile)
+        signIn() {
             return true
         }
     }

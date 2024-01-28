@@ -11,6 +11,7 @@
 -   [ ] Testing Tools for frontend
 -   [ ] Site map,Robots,manifest Generator
 -   [x] React Utils (Show,Loop,Switch)
+-   [ ] Internalization
 -   [ ] OG Graph images
 -   [ ] Page Transisions
 -   [ ] Blob Storage
