@@ -10,6 +10,9 @@ import { headers } from 'next/headers'
 import { Ratelimit } from '@upstash/ratelimit'
 import { kv } from '@vercel/kv'
 
+///
+import AuthButton from '@components/visual/Auth/AuthButton'
+
 const rateCache: Map<string, number> = new Map()
 
 const ratelimit = new Ratelimit({
@@ -37,6 +40,7 @@ export default async function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
+                <AuthButton onLoggedIn={'goodbay'} onLoggedOut={'hello'} />
                 <SessionProvider>
                     <ThemeProvider
                         attribute="class"

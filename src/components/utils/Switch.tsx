@@ -30,7 +30,7 @@ interface DefaultProps {
 
 type StatementProps = CaseProps | DefaultProps
 
-/* eslint-disable-next-line no-unused-vars  */
+/* eslint-disable-next-line  */
 export function Case({ type, inCase, children }: StatementProps) {
     return children
 }

@@ -1,7 +1,16 @@
 {
+    "parserOptions": {
+        "project": "./tsconfig.json" // Adjust the path to your tsconfig.json file
+    },
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "root": true,
     "extends": [
         "next/core-web-vitals",
-        "eslint:recommended"
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended-type-checked"
     ],
     "rules": {
         "complexity": [
@@ -35,6 +44,7 @@
             "error",
             "separate-lines"
         ],
-        "no-var": "error"
+        "no-var": "error",
+        "no-shadow": "warn"
     }
 }
